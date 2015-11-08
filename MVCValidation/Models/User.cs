@@ -5,6 +5,7 @@ namespace MVCValidation.Models
 {
     public class User
     {
+        [Display(Name ="Adı")]
         [Required(ErrorMessage ="Adı giriniz!")]
         public string Name { get; set; }
 
@@ -20,6 +21,7 @@ namespace MVCValidation.Models
         public string PhoneNumber { get; set; }
 
         [DataType(DataType.DateTime)]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime  BirthDay { get; set; }
     }
 }
